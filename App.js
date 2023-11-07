@@ -4,7 +4,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Login } from './screens/user/Login';
 import {Profile} from './screens/user/Profile';
 import { Register } from './screens/user/Register';
-import { Chat } from './screens/work/Chat';
 import { StackNav } from './screens/nav/StackNav';
 
 export default function App() {

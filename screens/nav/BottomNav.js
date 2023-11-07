@@ -27,7 +27,8 @@ const MapScreen = ({ navigation, route }) => {
 export const BottomNav = () => {
     return(
         <Bottom.Navigator screenOptions={{
-            tabBarStyle: { position: 'absolute' ,height:100},
+            tabBarLabelStyle:{fontSize:20,fontWeight:'bold'},
+            tabBarStyle: { position: 'absolute' ,height:90},
             tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',}}>
             <Bottom.Screen name="Map" 
