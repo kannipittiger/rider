@@ -8,6 +8,8 @@ import {
 export const Profile = (props) => {
     const navigation = props.nav
     const route = props.route
+    const [profile, setProfile] = useState({ 'firstname': lastItem[0].displayName, 'lastname': lastItem[0].photoURL, 'studentID': lastItem[0].uid, 'username': lastItem[0].email })
+
     const signoutSuccess = () => {
         navigation.navigate('Login')
       }
@@ -19,10 +21,8 @@ export const Profile = (props) => {
                 </View>
                 <View style={{ flex: 2 }} />
                 <View style={[{ flex: 5, marginHorizontal: 20 ,borderWidth:1}]}>
-                    <TextInput placeholder='Firstname' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}} />
-                    <TextInput placeholder='Lastname' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}} />
+                    <TextInput placeholder='email' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}}  />
                     <TextInput placeholder='username' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}} />
-                    <TextInput placeholder='earning' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}} />
                     <View style={{flex:1}} />
                     <View style={{ flex: 2, borderWidth: 0, justifyContent: 'center' }}>
                         <TouchableOpacity
