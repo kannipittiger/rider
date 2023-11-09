@@ -29,7 +29,7 @@ export const BottomNav = () => {
         <Bottom.Navigator screenOptions={{
             tabBarLabelStyle:{fontSize:20,fontWeight:'bold'},
             tabBarStyle: { position: 'absolute' ,height:90},
-            tabBarActiveTintColor: 'tomato',
+            tabBarActiveTintColor: '#FF914D',
           tabBarInactiveTintColor: 'gray',}}>
             <Bottom.Screen name="Map" 
                 component={MapScreen} 

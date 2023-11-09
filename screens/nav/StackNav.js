@@ -36,7 +36,7 @@ export const StackNav = () => {
         }
       >
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: true }} />
+        <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Bottom" component={MainBottom} options={{ headerShown: false }} />
       </Stack.Navigator>
     )

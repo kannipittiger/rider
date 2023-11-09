@@ -26,7 +26,7 @@ export const Chat = (props) => {
                         style={styles.textInput}
                     />
                     <TouchableOpacity>
-                        <MaterialCommunityIcons name="send-circle" size={40} color="#2A4602" />
+                        <MaterialCommunityIcons name="send-circle" size={50} color="#FF914D" />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -64,11 +64,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderWidth: 1,
-        borderColor: '#447706',
+        borderColor: '#FF914D',
         marginTop: 16,
         marginBottom: '15%',
         marginLeft: 8,
-        marginRight: 8
+        marginRight: 8,
+        borderRadius:50
 
     },
     textInput: {

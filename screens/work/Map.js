@@ -32,7 +32,7 @@ export const Map = (props) => {
     const navigation = props.nav
     const route = props.route
     const MARK = {uri:'https://i.ibb.co/27MfGQf/bike.png'}
-    const origin = {latitude: `${l1}`, longitude: `${l2}`};
+    const origin = {latitude: 13.1279678, longitude:100.9547501};
     const destination = {latitude: 13.07913, longitude: 101.93422};
     const GOOGLE_MAPS_APIKEY = 'AIzaSyBQPDdg96BpVWwHmkiTIr3LpjLu4CshNgQ';
 
@@ -89,6 +89,10 @@ export const Map = (props) => {
                     />
                     <Marker
                         coordinate={{latitude:13.11374,longitude:100.92262}}
+                    >
+                    </Marker>
+                    <Marker
+                        coordinate={{latitude:13.07913,longitude:101.93422}}
                     >
                     </Marker>
                 </MapView>

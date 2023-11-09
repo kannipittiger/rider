@@ -68,27 +68,27 @@ export const Login = (props) => {
   }
 
     return(
-        <SafeAreaView style={{flex:1,backgroundColor:'white',borderWidth:1}}>
-            <View style={{flex:1,borderWidth:1}}/>
-            <View style={{flex:5,borderWidth:1,borderRadius:50,marginHorizontal:30}}>
-
+        <SafeAreaView style={{flex:1,backgroundColor:'white',borderWidth:0}}>
+            <View style={{flex:1,borderWidth:0}}/>
+            <View style={{flex:5,borderWidth:0,borderRadius:50,marginHorizontal:30}}>
+            <Image source={require('../../assets/1.png')} style={{ flex: 2, alignItems: 'center', width: '100%', height: '80%', borderWidth: 0 }} />
             </View>
             <View style={{flex:1}} />
             <View style={{flex:3,borderWidth:0}}>
-                <TextInput placeholder='Username' secureTextEntry={false}  style={{flex:1,borderWidth:1,paddingLeft:40,borderRadius:100,marginHorizontal:80,fontSize:25}} value={credential.username} onChangeText={(text) => setUsername(text)} />
-                <TextInput placeholder='Password' secureTextEntry={true} style={{flex:1,borderWidth:1,paddingLeft:40,borderRadius:100,marginHorizontal:80,marginTop:20,fontSize:25}} value={credential.password} onChangeText={(text) => setPassword(text)} />
+                <TextInput placeholder='Username' secureTextEntry={false}  style={{flex:1,borderWidth:1,paddingLeft:40,borderRadius:100,marginHorizontal:80,fontSize:25,borderColor:'#FF914D'}} value={credential.username} onChangeText={(text) => setUsername(text)} />
+                <TextInput placeholder='Password' secureTextEntry={true} style={{flex:1,borderWidth:1,paddingLeft:40,borderRadius:100,marginHorizontal:80,marginTop:20,fontSize:25,borderColor:'#FF914D'}} value={credential.password} onChangeText={(text) => setPassword(text)} />
             </View>
             <View style={{flex:0.5}} />
-            <View style={{flex:2,flexDirection:'row',borderWidth:1}}>
+            <View style={{flex:2,flexDirection:'row',borderWidth:0}}>
                 <TouchableOpacity 
-                    style={{flex:1,backgroundColor:'gray',borderWidth:1,borderRadius:100,justifyContent:'center',alignItems:'center',marginVertical:40,marginLeft:40,marginRight:20}}
+                    style={{flex:1,backgroundColor:'#FF914D',borderWidth:0,borderRadius:100,justifyContent:'center',alignItems:'center',marginVertical:40,marginLeft:40,marginRight:20}}
                     onPress={onSignInPress}>
-                    <Text style={{fontSize:30,fontWeight:'bold'}} >Sign In</Text>
+                    <Text style={{fontSize:30,fontWeight:'bold',color:'white'}} >Sign In</Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
-                    style={{flex:1,backgroundColor:'gray',borderWidth:1,borderRadius:100,justifyContent:'center',alignItems:'center',marginVertical:40,marginLeft:20,marginRight:40}}
+                    style={{flex:1,backgroundColor:'#FF914D',borderWidth:0,borderRadius:100,justifyContent:'center',alignItems:'center',marginVertical:40,marginLeft:20,marginRight:40}}
                     onPress={GotoRegister}>
-                    <Text style={{fontSize:30,fontWeight:'bold'}}>Sign Up</Text>
+                    <Text style={{fontSize:30,fontWeight:'bold',color:'white'}}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
             <View>

@@ -2,40 +2,33 @@ import { useState, useRef, useEffect } from "react";
 import {
     View, Text, FlatList,
     StyleSheet, TextInput, TouchableOpacity,
-    Alert, KeyboardAvoidingView, Platform,SafeAreaView
+    Alert, KeyboardAvoidingView, Platform,SafeAreaView,Image
 } from 'react-native';
 
 export const Profile = (props) => {
     const navigation = props.nav
     const route = props.route
-    const [profile, setProfile] = useState({ 'firstname': lastItem[0].displayName, 'lastname': lastItem[0].photoURL, 'studentID': lastItem[0].uid, 'username': lastItem[0].email })
 
     const signoutSuccess = () => {
         navigation.navigate('Login')
       }
 
     return(
-            <SafeAreaView style={{flex:1}}>
-                <View style={{flex:2,borderWidth:1,justifyContent:'flex-end',alignItems:'center'}}>
-                    <Text style={{fontSize:50,fontWeight:'bold'}}>Profile</Text>
+            <SafeAreaView style={{flex:1,backgroundColor:'white'}}>
+                <View style={{flex:4,borderWidth:0,justifyContent:'flex-end',alignItems:'center'}}>
+                    <Image source={require('../../assets/1.png')} style={{ flex: 2, alignItems: 'center', width: '100%', height: '80%', borderRadius: 500 }} />
+                    <Text style={{fontSize:60,fontWeight:'bold',color:'#FF914D'}}>Profile</Text>
                 </View>
-                <View style={{ flex: 2 }} />
-                <View style={[{ flex: 5, marginHorizontal: 20 ,borderWidth:1}]}>
-                    <TextInput placeholder='email' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}}  />
-                    <TextInput placeholder='username' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40}} />
+                <View style={[{ flex: 5, marginHorizontal: 20 ,borderWidth:0}]}>
+                    <TextInput placeholder='email' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40,marginBottom:20,borderRadius:100,marginTop:60,fontSize:20,borderColor:'#FF914D'}} placeholderTextColor={'#FF914D'} color={'#FF914D'} />
+                    <TextInput placeholder='username' secureTextEntry={false} style={{flex:1,borderWidth:1,paddingLeft:40,borderRadius:100,fontSize:20,borderColor:'#FF914D'}} placeholderTextColor={'#FF914D'} color={'#FF914D'}/>
                     <View style={{flex:1}} />
-                    <View style={{ flex: 2, borderWidth: 0, justifyContent: 'center' }}>
+                    <View style={{ flex: 2, borderWidth: 0, justifyContent: 'center', alignItems: 'center' }}>
                         <TouchableOpacity
-                            style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'gray', borderRadius: 40, marginVertical: 20 }}
+                            style={{ flex: 0.8,width:'50%',height:'50%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#FF914D', borderRadius: 40, marginVertical: 20 }}
                             onPress={signoutSuccess}
                         >
-                            <Text style={{ fontSize: 20 }}>Sign out</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'gray', borderRadius: 40, marginBottom: 0 }}
-                            
-                        >
-                            <Text style={{ fontSize: 20 }}>Go to Splash</Text>
+                            <Text style={{ fontSize: 35,color:'white' ,fontWeight:'bold' }}>Sign out</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

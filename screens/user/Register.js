@@ -55,30 +55,31 @@ export const Register = (props) => {
   }
 
     return(
-        <SafeAreaView style={{flex:1}}>
+        <SafeAreaView style={{flex:1,backgroundColor:'#FF914D'}}>
           <View style={{ flex: 1 }}></View>
           <View style={[{ flex: 9 }]}>
-            <View style={{ flex: 3, flexDirection: 'row', paddingLeft: 5, borderWidth: 1, alignItems: 'center' }}>
-              <Image source={LOGO} style={{ flex: 2, alignItems: 'center', width: '100%', height: '80%', borderWidth: 0 }} />
-              <Text style={{ flex: 5, justifyContent: 'center', alignItems: 'center', fontWeight: 'bold', fontSize: 30, paddingLeft: 10 }}>Registration</Text>
+            <View style={{ flex: 3, flexDirection: 'row', paddingLeft: 5, borderWidth: 0, alignItems: 'center' , borderRadius:50}}>
+              <Image source={require('../../assets/1.png')} style={{ flex: 2, alignItems: 'center', width: '100%', height: '80%', borderRadius: 500 }} />
+              <Text style={{ flex: 5, justifyContent: 'center', alignItems: 'center', fontWeight: 'bold', fontSize: 70, paddingLeft: 10,color:'white' }}>Registration</Text>
             </View>
-            <TextInput placeholder='Email' secureTextEntry={false} value={profile.email} style={{flex:1}} onChangeText={(text) => setEmail(text)} />
-            <TextInput placeholder='Name' secureTextEntry={false} value={profile.username} style={{flex:1}} onChangeText={(text) => setUsername(text)} />
-            <TextInput placeholder='Password' secureTextEntry={true} value={profile.password} style={{flex:1}} onChangeText={(text) => setPassword(text)} />
-            <View style={{ flex: 1, flexDirection: 'row', paddingVertical: 5, borderWidth: 0, justifyContent: 'center' }}>
+            <TextInput placeholder='Email' secureTextEntry={false} value={profile.email} style={{flex:1,marginHorizontal:30,borderColor:'white', borderWidth: 1,borderRadius:50,paddingLeft:50,marginVertical:10,fontSize:20}} onChangeText={(text) => setEmail(text)} placeholderTextColor={'white'} color={'white'}/>
+            <TextInput placeholder='Name' secureTextEntry={false} value={profile.username} style={{flex:1,marginHorizontal:30,borderColor:'white', borderWidth: 1,borderRadius:50,paddingLeft:50,marginBottom:5,fontSize:20}} onChangeText={(text) => setUsername(text)} placeholderTextColor={'white'} color={'white'}/>
+            <TextInput placeholder='Password' secureTextEntry={true} value={profile.password} style={{flex:1,marginHorizontal:30,borderColor:'white', borderWidth: 1,borderRadius:50,paddingLeft:50,marginVertical:5,fontSize:20}} onChangeText={(text) => setPassword(text)} placeholderTextColor={'white'} color={'white'}/>
+            <View style={{ flex: 1, flexDirection: 'row', paddingVertical: 5, borderWidth: 0, justifyContent: 'center',marginHorizontal:50 }}>
               <TouchableOpacity
-                style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'gray', borderRadius: 40 }}
+                style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 40 }}
                 onPress={onRegisterPress}
               >
-                <Text style={{ fontSize: 20 }}>Register</Text>
+                <Text style={{ fontSize: 30,fontWeight:'bold',color:'#FF914D' }}>Register</Text>
               </TouchableOpacity>
             </View>
-            <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 10, justifyContent: 'center' }}>
+            <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 10, justifyContent: 'center',marginHorizontal:50 }}>
               <TouchableOpacity
-                style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'gray', borderRadius: 40 }}
+                style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', borderRadius: 40 }}
+                onPress={onCancelPress}
               >
 
-                <Text style={{ fontSize: 20 }}>Cancel</Text>
+                <Text style={{ fontSize: 30,fontWeight:'bold',color:'#FF914D' }}>Cancel</Text>
               </TouchableOpacity>
             </View>
 
